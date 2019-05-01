@@ -12,3 +12,8 @@ Following is a working demonstration of how I have put it to use for my personal
 
 I can think of lot more applications for this sort of scripts mainly in network and system administration. Instead of traditional mails we can pipe the output of various commands (cron jobs to `slackme`)
 
+
+## Instruction
+1. Replace web_hook with your own slack web hook
+2. make `slackme` executabe `sudo chmod +x slackme`
+
