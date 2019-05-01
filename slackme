@@ -1,0 +1,20 @@
+#!/usr/bin/python
+import requests as r
+import json
+import sys
+
+web_hook='' #web hook url
+def send_message(msg):
+	payload={'text':msg}
+	one_man_army_hook=web_hook
+	headers= {'Content-type': 'application/json'}
+	response=r.post(one_man_army_hook, data=json.dumps(payload), headers=headers)
+	print(response.text)
+
+if __name__ == "__main__":
+	message = sys.argv[1:]
+	print("console message is {}".format(message))
+	if not message:
+		message=sys.stdin.readlines()
+		print("stdin message is {}".format(message))
+	send_message(' '.join(message))
